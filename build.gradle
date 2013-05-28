@@ -1,0 +1,36 @@
+    buildscript {
+        repositories {
+            mavenCentral()
+        }
+        dependencies {
+            classpath 'com.android.tools.build:gradle:0.4'
+        }
+    }
+    
+    apply plugin: 'android'
+    
+    android.compileSdkVersion 17
+    android.buildToolsVersion '17'
+   
+    android {
+    target = 'android-17'
+    sourceSets {
+        main {
+            manifest {
+                srcFile 'AndroidManifest.xml'
+            }
+            java {
+                srcDir 'src'
+            }
+            res {
+                srcDir 'res'
+            }
+            assets {
+                srcDir 'assets'
+            }
+            resources {
+                srcDir 'src'
+            }
+        }
+    }
+}
